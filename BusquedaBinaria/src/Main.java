@@ -3,7 +3,7 @@ import java.io.*;
 
 public class Main {
 
-    // Metodo principal que ordena la lista usando QuickSort
+    // Metodo principal que ordena 
     public static void ordenarRapido(List<Integer> lista) {
         if (lista.size() <= 1) return;
 
