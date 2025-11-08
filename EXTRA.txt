@@ -1,0 +1,20 @@
+
+
+Aunque la recursividad consume mucha memoria por la Pila de Llamadas y puede llevar a un Stack Overflow, existe una técnica de optimización que es importante conocer.
+
+Concepto Adicional: Recursividad de Cola (Tail Recursion)
+Una llamada recursiva es de cola si la llamada a sí misma es la última acción que realiza la función. No quedan operaciones pendientes, como sumas o multiplicaciones, que hacer con el resultado de esa llamada.
+
+Importancia de la Optimización de Cola (TCO)
+En otros lenguajes, un compilador inteligente puede convertir la Recursividad de Cola en un bucle iterativo. Esto recicla el mismo marco de pila para cada llamada, evitando el desbordamiento y haciéndolo tan eficiente como un bucle.
+
+El Punto Clave en Java
+El compilador de Java (JVM) NO realiza esta optimización de forma nativa. Esto significa que, incluso si escribes un método recursivo perfecto de cola, Java seguirá consumiendo un nuevo marco de pila para cada llamada.
+
+Conclusión para Java
+En Java, la recursividad siempre conlleva el riesgo de un Stack Overflow y mayor consumo de memoria, sin importar si es de cola o no. Por lo tanto, si la profundidad de la recursión es grande, casi siempre es mejor usar la iteración (un bucle for o while) para evitar errores y mejorar el rendimiento.
+
+Fuente de Información
+Este detalle se explica en artículos avanzados sobre rendimiento en Java, como "Recursion in Java" en Baeldung, específicamente en la sección que compara la recursividad de cola con la de cabeza.
+
+https://www.baeldung.com/java-recursion 
