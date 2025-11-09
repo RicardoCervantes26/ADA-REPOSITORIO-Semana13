@@ -14,7 +14,5 @@ El compilador de Java (JVM) NO realiza esta optimización de forma nativa. Esto 
 Conclusión para Java
 En Java, la recursividad siempre conlleva el riesgo de un Stack Overflow y mayor consumo de memoria, sin importar si es de cola o no. Por lo tanto, si la profundidad de la recursión es grande, casi siempre es mejor usar la iteración (un bucle for o while) para evitar errores y mejorar el rendimiento.
 
-Fuente de Información
-Este detalle se explica en artículos avanzados sobre rendimiento en Java, como "Recursion in Java" en Baeldung, específicamente en la sección que compara la recursividad de cola con la de cabeza.
 
 https://www.baeldung.com/java-recursion 
